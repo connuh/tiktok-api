@@ -1,5 +1,5 @@
 {
-  "name": "tiktok-api",
+  "name": "@c2nner/tiktok-api",
   "version": "1.0.0",
   "description": "Lightweight & fast TikTok API centralised around the Android API!",
   "type": "module",
@@ -18,16 +18,10 @@
   "bugs": {
     "url": "https://github.com/connuh/tiktok-api/issues"
   },
-  "keywords": [
-    "tiktok",
-    "api",
-    "tiktok-api",
-    "tiktok turob",
-    "tiktok swapper",
-    "tt swap",
-    "tiktok mobile",
-    "tiktok endpoint",
-    "endpoint"
-  ],
-  "homepage": "https://github.com/connuh/tiktok-api#readme"
+  "keywords": [ ],
+  "homepage": "https://github.com/connuh/tiktok-api#readme",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
