@@ -3,14 +3,11 @@
   "version": "1.0.0",
   "description": "Lightweight & fast TikTok API centralised around the Android API!",
   "type": "module",
-  "main": "main.js",
+  "main": "src/TikTok.js",
   "dependencies": {
     "centra": "^2.5.0",
     "https-proxy-agent": "^5.0.0",
     "phin": "^3.6.0"
-  },
-  "scripts": {
-    "start": "node --experimental-specifier-resolution=node ."
   },
   "repository": {
     "type": "git",

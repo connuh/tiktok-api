@@ -6,6 +6,6 @@
 // Imports
 import Client from "./TikTok/Client";
 
-export default {
+export {
   Client
 };
