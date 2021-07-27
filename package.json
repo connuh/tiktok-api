@@ -1,0 +1,36 @@
+{
+  "name": "tiktok-api",
+  "version": "1.0.0",
+  "description": "Lightweight & fast TikTok API centralised around the Android API!",
+  "type": "module",
+  "main": "main.js",
+  "dependencies": {
+    "centra": "^2.5.0",
+    "https-proxy-agent": "^5.0.0",
+    "phin": "^3.6.0"
+  },
+  "scripts": {
+    "start": "node --experimental-specifier-resolution=node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/connuh/tiktok-api.git"
+  },
+  "author": "Conner",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/connuh/tiktok-api/issues"
+  },
+  "keywords": [
+    "tiktok",
+    "api",
+    "tiktok-api",
+    "tiktok turob",
+    "tiktok swapper",
+    "tt swap",
+    "tiktok mobile",
+    "tiktok endpoint",
+    "endpoint"
+  ],
+  "homepage": "https://github.com/connuh/tiktok-api#readme"
+}
