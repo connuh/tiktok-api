@@ -4,5 +4,5 @@
  */
 
 export default {
-  
+  MALFORMED_RESPONSE: "The API returned a malformed response." 
 }
