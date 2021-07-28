@@ -46,9 +46,24 @@ class User {
 
   /**
    * @param {String} bio 
-   * @returns {Promise<Object>} 
+   * @param {String} proxy
+   * @returns {Promise<Boolean>} 
    */
-  setBio = async bio => await Request.post("UPDATE_PROFILE", this.session, `signature=${bio}`);
+  async setBio(bio, proxy = null) {
+    let {
+      status_code,
+      status_msg
+    } = await Request.post("UPDATE_PROFILE", this.session, `signature=${bio}`, proxy);
+
+    if(typeof status_code !== "number")
+      throw Errors.MALFORMED_RESPONSE;
+
+    if(status_code > 0)
+      throw status_msg;
+
+    return true;
+  }
+
 
   /**
    * 
