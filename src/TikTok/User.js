@@ -68,9 +68,23 @@ class User {
   /**
    * 
    * @param {String} nickname 
-   * @returns {Promise<Object>}
+   * @param {String} proxy
+   * @returns {Promise<Boolean>}
    */
-  setNickname = async nickname => await Request.post("UPDATE_PROFILE", this.session, `nickname=${nickname}`);
+  async setNickname(nickname, proxy = null) {
+    let {
+      status_code,
+      status_msg
+    } = await Request.post("UPDATE_PROFILE", this.session, `nickname=${nickname}`, proxy);
+
+    if(typeof status_code !== "number")
+      throw Errors.MALFORMED_RESPONSE;
+
+    if(status_code > 0)
+      throw status_msg;
+
+    return true;
+  }
 }
 
 export default User;
