@@ -6,6 +6,9 @@
 // Handlers
 import Request from "./handlers/Request";
 
+// Constants
+import Errors from "../constants/Errors";
+
 // User Class
 class User {
   /**
@@ -18,7 +21,21 @@ class User {
   /** 
    * @returns {Promise<Object>}
    */
-  get = async () => await Request.get("ACCOUNT_INFO", this.session);
+  async get() {
+    let {
+      status_code,
+      status_msg,
+      user
+    } = await Request.get("ACCOUNT_INFO", this.session);
+
+    if(typeof status_code !== "number")
+      throw Errors.MALFORMED_RESPONSE;
+
+    if(status_code > 0)
+      throw status_msg || "N/A";
+
+    return user;
+  }
 
   /**
    * @param {String} username
